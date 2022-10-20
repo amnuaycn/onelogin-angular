@@ -1,6 +1,40 @@
 # App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.x.x
+
+## Configuration file
+####1. src/environments/environment.ts, src/environments/environment.prod.ts
+
+```
+  oidc : {
+    stsAuthority: 'https://<onelogin subdomain>.onelogin.com/oidc/2/',
+    clientId: '<client_id>',
+    ClientSecret: '<client_secret>',
+    clientRoot: 'http://localhost:4200/',
+    clientScope: 'openid email profile'
+  },
+  api : {
+    clientId: '<api_client_id>',
+    ClientSecret: '<api_client_secret>',
+    apiRoot: 'https://<onelogin subdomain>.onelogin.com'
+  }
+  ```
+ ####2.  src/proxy.config.js
+ ```
+   const PROXY_CONFIG = [
+    {
+        context: [
+            "/api",
+            "/auth"
+        ],
+        target: "https://<onelogin subdomain>.onelogin.com",
+        changeOrigin: true,
+        secure: true,
+        logLevel: "debug", 
+    }
+]
+module.exports = PROXY_CONFIG;
+```
 
 ## Development server
 
