@@ -1,7 +1,7 @@
 # App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.x.x
-and `[oidc-client-ts](https://github.com/authts/oidc-client-ts)` 
+and [oidc-client-ts](https://github.com/authts/oidc-client-ts)
 
 ## Configuration file
 ####1. src/environments/environment.ts, src/environments/environment.prod.ts
