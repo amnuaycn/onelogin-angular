@@ -17,7 +17,7 @@ and [oidc-client-ts](https://github.com/authts/oidc-client-ts)
   api : {
     clientId: '<api_client_id>',
     ClientSecret: '<api_client_secret>',
-    apiRoot: '<MY HOST API>'
+    apiRoot: 'https://<onelogin subdomain>.onelogin.com'
   }
   ```
  ####2.  src/proxy.config.js
